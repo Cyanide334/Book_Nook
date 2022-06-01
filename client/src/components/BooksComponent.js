@@ -3,6 +3,10 @@ import { Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Loading from './LoadingComponent.js';
 
+const handleClick = () => {
+    alert("Please note the ISBN or name of the book and contact the book club for borrowing")
+}
+
 // RenderBook is a functional component
 function RenderBook({
     book,
@@ -22,7 +26,7 @@ function RenderBook({
             <td>{book.author}</td>
             <td>{book.copies}</td>
             <td>
-                <button className='btn btn-primary'>Borrow Book</button>
+                <button className='btn btn-primary' onClick={handleBorrow}>Borrow Book</button>
             </td>
             {isAdmin ? (
                 <td>
